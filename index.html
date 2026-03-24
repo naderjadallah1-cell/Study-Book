@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ابدأ الآن واحصل على خدمتك خلال 72 ساعة عمل | حلول الدفع الذكية</title>
   <meta name="description" content="حلول الدفع الذكية في الإمارات: ماكينة دفع POS، الدفع عبر الرابط، وبوابة الدفع للموقع الإلكتروني. تفعيل الخدمة خلال 72 ساعة عمل، عمولة تبدأ من 1.25%، بدون رسوم شهرية أو سنوية، دعم 24/7، وتحويل لحسابك البنكي خلال 24 ساعة." />
-<style>
+  <style>
     :root{
       --bg:#0b1220;
       --bg2:#111a2e;
@@ -259,9 +259,9 @@
       height:100%;
       min-height:610px;
       object-fit:cover;
-      object-position:center;
+      object-position:center top;
       display:block;
-      transform:scale(1.03);
+      transform:none;
     }
 
     .hero-photo-gradient{
@@ -711,12 +711,41 @@
       .stats-grid{grid-template-columns:1fr 1fr}
       .topbar .inner,.submit-row,.footer-card{flex-direction:column;align-items:stretch}
       .mockup{min-height:auto}
-      .hero-photo,
-      .hero-photo-card{min-height:540px}
-      .hero-copy{left:16px;right:16px;bottom:16px;padding:18px}
-      .hero-float-top{top:16px;left:16px}
-      .hero-float-bottom{left:16px;bottom:172px}
-      .hero-glass-panel{top:auto;right:16px;left:16px;bottom:186px;max-width:none}
+
+      .hero-photo-card{
+        min-height:700px;
+      }
+
+      .hero-photo{
+        min-height:700px;
+        object-position:center top;
+      }
+
+      .hero-copy{
+        left:16px;
+        right:16px;
+        bottom:16px;
+        padding:18px;
+      }
+
+      .hero-float-top{
+        top:16px;
+        left:16px;
+      }
+
+      .hero-float-bottom{
+        left:16px;
+        bottom:250px;
+      }
+
+      .hero-glass-panel{
+        top:auto;
+        right:16px;
+        left:16px;
+        bottom:340px;
+        max-width:none;
+      }
+
       .hero{padding-top:42px}
       .floating-cta{left:18px;right:18px;justify-content:center}
     }
@@ -764,7 +793,7 @@
 
         <div class="mockup hero-showcase">
           <div class="hero-photo-card">
-            <img class="hero-photo" src="hero-payment-visual.jpg" alt="رائدة أعمال تستخدم جهاز دفع ذكي داخل متجر" />
+            <img class="hero-photo" src="./hero-payment-visual.jpg?v=3" alt="رائدة أعمال تستخدم جهاز دفع ذكي داخل متجر" />
             <div class="hero-photo-gradient"></div>
 
             <div class="hero-copy">
