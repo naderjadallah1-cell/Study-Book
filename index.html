@@ -1422,6 +1422,7 @@
 
     function showMessage(id) {
       const msg = document.getElementById(id);
+      if (!msg) return;
       msg.style.display = "block";
       setTimeout(() => {
         msg.style.display = "none";
@@ -1502,6 +1503,8 @@
     let liveIndex = 0;
 
     function showLiveOrder() {
+      if (!toast || !toastTitle || !toastSub || !toastTime || !toastIcon) return;
+
       const item = liveOrders[liveIndex % liveOrders.length];
       toastTitle.textContent = "New order received";
       toastSub.textContent = `${item.name} from ${item.city} ordered the Intellectual Learning Book`;
@@ -1519,6 +1522,33 @@
 
     setTimeout(showLiveOrder, 3000);
     setInterval(showLiveOrder, 11000);
+
+    async function submitOrder(payload) {
+      return fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    function buildThankYouUrl(data) {
+      const params = new URLSearchParams({
+        name: data.name,
+        phone: data.phone,
+        city: data.city,
+        product: data.product,
+        price: data.price,
+        sku: data.product_sku,
+        warranty_note: data.warranty_note,
+        notes: data.notes,
+        image: data.image
+      });
+
+      return "thank-you.html?" + params.toString();
+    }
 
     document.getElementById("orderForm").addEventListener("submit", async function (e) {
       e.preventDefault();
@@ -1569,18 +1599,23 @@
         pageUrl: window.location.href
       };
 
+      const thankYouData = {
+        name: name,
+        phone: phone,
+        city: city,
+        address: address,
+        notes: notes,
+        product: "Study Book - Intellectual Learning Book",
+        product_sku: "SIEO-N-TY-ZAM",
+        price: "89.99 AED",
+        warranty_note: "30-day replacement guarantee on all products",
+        image: "study-book-thankyou.jpg"
+      };
+
       try {
-        const response = await fetch(scriptURL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
+        localStorage.setItem("lastOrder", JSON.stringify(thankYouData));
 
-        const result = await response.json();
-
-        if (result.status !== "success") {
-          throw new Error(result.message || "Order submission failed");
-        }
+        await submitOrder(payload);
 
         if (typeof fbq !== "undefined") {
           fbq("track", "Purchase", {
@@ -1594,44 +1629,15 @@
         }
 
         showSuccess();
-
-        const thankYouData = {
-          name: name,
-          phone: phone,
-          city: city,
-          address: address,
-          notes: notes,
-          product: "Study Book - Intellectual Learning Book",
-          product_sku: "SIEO-N-TY-ZAM",
-          price: "89.99 AED",
-          warranty_note: "30-day replacement guarantee on all products",
-          image: "study-book-thankyou.jpg"
-        };
-
-        localStorage.setItem("lastOrder", JSON.stringify(thankYouData));
-
         document.getElementById("orderForm").reset();
 
         setTimeout(() => {
-          const params = new URLSearchParams({
-            name: thankYouData.name,
-            phone: thankYouData.phone,
-            city: thankYouData.city,
-            product: thankYouData.product,
-            price: thankYouData.price,
-            sku: thankYouData.product_sku,
-            warranty_note: thankYouData.warranty_note,
-            notes: thankYouData.notes,
-            image: thankYouData.image
-          });
-
-          window.location.href = "thank-you.html?" + params.toString();
-        }, 700);
+          window.location.href = buildThankYouUrl(thankYouData);
+        }, 500);
 
       } catch (error) {
-        console.error(error);
+        console.error("Order submit error:", error);
         showError();
-      } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = "Order Now in UAE – 89.99 AED 📚";
       }
