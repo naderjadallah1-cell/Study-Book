@@ -34,6 +34,7 @@
       }
     });
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1721589715914524&ev=PageView&noscript=1" />
   </noscript>
@@ -98,10 +99,6 @@
       font-size: 14px;
       font-weight: 900;
       letter-spacing: .15px;
-    }
-
-    .social-proof-bar {
-      display: none;
     }
 
     .shipping-bar {
@@ -239,6 +236,18 @@
       color: var(--muted);
       font-size: 14px;
       font-weight: 800;
+    }
+
+    .hero-inline-image {
+      margin: 16px 0 22px;
+    }
+
+    .hero-inline-image img {
+      width: 100%;
+      border-radius: 24px;
+      border: 1px solid #e9edf5;
+      box-shadow: 0 20px 46px rgba(15,17,21,.14);
+      object-fit: cover;
     }
 
     h1 {
@@ -486,6 +495,24 @@
       font-weight: 800;
     }
 
+    .micro-trust {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .micro-trust-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+      color: #1d2330;
+    }
+
     .trust-grid {
       display: grid;
       grid-template-columns: repeat(4,1fr);
@@ -544,11 +571,8 @@
       box-shadow: 0 12px 26px rgba(240,185,11,.20);
     }
 
-    .hero-inline-image {
-      display: none;
-    }
-
-    .side-col {
+    .side-col,
+    .social-proof-bar {
       display: none;
     }
 
@@ -997,6 +1021,10 @@
             <div class="rating">
               <div class="stars">★★★★★</div>
               <div class="rating-text">A fun way to help your child learn letters, words, numbers, and listening skills</div>
+            </div>
+
+            <div class="hero-inline-image">
+              <img src="study-book-hero.jpg" alt="Study Book for children" />
             </div>
 
             <h1>Make learning at home more fun for your child</h1>
