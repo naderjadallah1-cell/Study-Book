@@ -11,21 +11,34 @@
 
   <style>
     :root {
+      --bg: #ffffff;
+      --bg-soft: #f8f9fc;
       --white: #ffffff;
-      --text: #241715;
-      --muted: #7a625d;
-      --line: #f1d9d2;
-      --soft: #fff3ee;
-      --soft2: #fff8df;
-      --primary: #ff5a4f;
-      --primary-dark: #e6453b;
-      --accent: #2a1b18;
-      --green: #2eb67d;
-      --green-soft: #ebfbf3;
-      --gold: #ffbe3b;
-      --shadow: 0 16px 36px rgba(255,90,79,.10);
-      --shadow-strong: 0 22px 50px rgba(255,90,79,.14);
-      --container: 920px;
+      --text: #111111;
+      --muted: #667085;
+      --line: #e8ecf3;
+
+      --gold: #f0b90b;
+      --gold-dark: #cc9600;
+      --gold-soft: #fff8dc;
+
+      --blue: #1488ff;
+      --blue-dark: #005fd1;
+      --blue-soft: #edf6ff;
+
+      --red: #ff3b30;
+      --red-dark: #d91f14;
+      --red-soft: #fff1ef;
+
+      --black: #0f1115;
+      --black-soft: #1b2230;
+
+      --green: #22b35d;
+      --green-soft: #eaf8f0;
+
+      --shadow: 0 14px 34px rgba(15,17,21,.08);
+      --shadow-strong: 0 24px 60px rgba(15,17,21,.14);
+      --container: 940px;
     }
 
     * { box-sizing: border-box; }
@@ -35,9 +48,9 @@
       font-family: 'Cairo', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(255,90,79,.08), transparent 24%),
-        radial-gradient(circle at top left, rgba(255,190,59,.12), transparent 22%),
-        linear-gradient(180deg, #fffaf8 0%, #fff4ef 100%);
+        radial-gradient(circle at top left, rgba(240,185,11,.07), transparent 20%),
+        radial-gradient(circle at top right, rgba(20,136,255,.07), transparent 20%),
+        linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
       min-height: 100vh;
     }
 
@@ -45,7 +58,7 @@
     a { text-decoration: none; color: inherit; }
 
     .topbar {
-      background: linear-gradient(90deg, #ff5a4f, #ff7b59);
+      background: linear-gradient(90deg, var(--black), #232a38, var(--black));
       color: #fff;
       text-align: center;
       padding: 11px 12px;
@@ -70,11 +83,11 @@
 
     .hero {
       position: relative;
-      padding: 34px 24px 28px;
+      padding: 36px 24px 28px;
       background:
-        radial-gradient(circle at 10% 10%, rgba(255,90,79,.07), transparent 25%),
-        radial-gradient(circle at 90% 15%, rgba(255,190,59,.10), transparent 22%),
-        linear-gradient(180deg, #ffffff 0%, #fffaf8 100%);
+        radial-gradient(circle at 10% 10%, rgba(240,185,11,.08), transparent 22%),
+        radial-gradient(circle at 90% 15%, rgba(20,136,255,.08), transparent 20%),
+        linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
       text-align: center;
     }
 
@@ -88,7 +101,7 @@
       justify-content: center;
       background: var(--green-soft);
       border: 2px solid #cfeedd;
-      box-shadow: 0 14px 28px rgba(46,182,125,.14);
+      box-shadow: 0 14px 28px rgba(34,179,93,.14);
       font-size: 42px;
       color: var(--green);
       font-weight: 900;
@@ -98,7 +111,7 @@
       margin: 0 0 10px;
       font-size: 42px;
       line-height: 1.3;
-      color: #201310;
+      color: var(--black);
       font-weight: 900;
     }
 
@@ -106,22 +119,27 @@
       max-width: 700px;
       margin: 0 auto 18px;
       font-size: 18px;
-      line-height: 2;
-      color: #5c4843;
+      line-height: 1.9;
+      color: #3c4658;
       font-weight: 700;
     }
 
+    .lead strong {
+      color: var(--black);
+    }
+
     .hero-image {
-      margin: 22px auto 18px;
-      max-width: 560px;
+      margin: 24px auto 18px;
+      max-width: 600px;
     }
 
     .hero-image img {
       width: 100%;
-      border-radius: 26px;
-      border: 1px solid #f0ddd7;
-      box-shadow: 0 14px 34px rgba(0,0,0,.08);
+      border-radius: 28px;
+      border: 1px solid #e9edf5;
+      box-shadow: 0 18px 40px rgba(15,17,21,.12);
       object-fit: cover;
+      background: #fff;
     }
 
     .micro-trust {
@@ -133,24 +151,24 @@
 
     .micro-trust-item {
       background: #fff;
-      border: 1px solid #f1ddd7;
+      border: 1px solid var(--line);
       border-radius: 18px;
       padding: 14px 12px;
       text-align: center;
       font-size: 14px;
       font-weight: 900;
-      color: #6a4b43;
+      color: #253041;
     }
 
     .section {
-      padding: 22px 24px;
-      border-top: 1px solid #f3e3dd;
+      padding: 24px;
+      border-top: 1px solid #edf1f7;
     }
 
     .section-title {
       margin: 0 0 14px;
       font-size: 28px;
-      color: #201310;
+      color: var(--black);
       font-weight: 900;
       text-align: center;
     }
@@ -158,9 +176,9 @@
     .section-sub {
       margin: 0 0 20px;
       text-align: center;
-      color: #7a625d;
+      color: var(--muted);
       font-size: 16px;
-      line-height: 1.9;
+      line-height: 1.8;
       font-weight: 700;
     }
 
@@ -171,8 +189,8 @@
     }
 
     .step {
-      background: linear-gradient(135deg, #fff8df, #fff3ee);
-      border: 1px solid #f1ddd7;
+      background: linear-gradient(135deg, #fffdf5, #f7fbff);
+      border: 1px solid var(--line);
       border-radius: 22px;
       padding: 18px;
       text-align: center;
@@ -186,37 +204,41 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      background: linear-gradient(135deg, var(--red), var(--red-dark));
       color: #fff;
       font-size: 18px;
       font-weight: 900;
-      box-shadow: 0 12px 24px rgba(255,90,79,.24);
+      box-shadow: 0 12px 24px rgba(255,59,48,.22);
     }
 
     .step h3 {
       margin: 0 0 8px;
       font-size: 18px;
-      color: var(--primary-dark);
+      color: var(--blue-dark);
       font-weight: 900;
     }
 
     .step p {
       margin: 0;
-      color: #705a54;
-      line-height: 1.9;
+      color: #586274;
+      line-height: 1.8;
       font-size: 15px;
       font-weight: 700;
     }
 
     .summary-grid {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 14px;
+    }
+
+    .summary-grid.four {
+      grid-template-columns: repeat(4,1fr);
     }
 
     .summary-item {
       background: #fff;
-      border: 1px solid #f1ddd7;
+      border: 1px solid var(--line);
       border-radius: 22px;
       padding: 18px 14px;
       text-align: center;
@@ -230,33 +252,33 @@
     .summary-title {
       font-size: 15px;
       font-weight: 900;
-      color: #241715;
+      color: var(--black);
       margin-bottom: 4px;
     }
 
     .summary-text {
       font-size: 14px;
-      color: #7a625d;
+      color: var(--muted);
       line-height: 1.8;
       font-weight: 700;
       word-break: break-word;
     }
 
     .notice-box {
-      background: linear-gradient(135deg, #fff3c8, #fff8df);
-      border: 1px solid #ffd56f;
-      color: #8a5400;
+      background: linear-gradient(135deg, #fff8dc, #fff1ef);
+      border: 1px solid #f3dcb3;
+      color: #7b5200;
       border-radius: 22px;
       padding: 18px;
       font-size: 15px;
       font-weight: 800;
-      line-height: 2;
+      line-height: 1.9;
       text-align: center;
     }
 
     .contact-box {
-      background: linear-gradient(135deg, #fff3ee, #fff8df);
-      border: 1px solid #f1d9d2;
+      background: linear-gradient(135deg, #fdfdfd, #f6f9ff);
+      border: 1px solid var(--line);
       border-radius: 24px;
       padding: 20px;
       text-align: center;
@@ -266,12 +288,12 @@
       display: block;
       margin-bottom: 8px;
       font-size: 18px;
-      color: var(--primary-dark);
+      color: var(--red-dark);
     }
 
     .contact-box p {
       margin: 0;
-      color: #705a54;
+      color: #586274;
       line-height: 1.9;
       font-size: 15px;
       font-weight: 700;
@@ -305,30 +327,34 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      background: linear-gradient(135deg, var(--red), var(--red-dark));
       color: #fff;
-      box-shadow: 0 16px 34px rgba(255,90,79,.24);
+      box-shadow: 0 16px 34px rgba(255,59,48,.20);
     }
 
     .btn-secondary {
-      background: #fff8df;
-      border: 1px solid #ffd56f;
-      color: #8a5400;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(20,136,255,.16);
     }
 
     .footer-note {
       margin-top: 18px;
       text-align: center;
-      color: #856862;
+      color: var(--muted);
       font-size: 14px;
       line-height: 1.9;
       font-weight: 700;
     }
 
     @media (max-width: 900px) {
-      .steps, .summary-grid, .micro-trust {
+      .steps,
+      .summary-grid,
+      .summary-grid.four,
+      .micro-trust {
         grid-template-columns: 1fr 1fr;
       }
+
       .hero h1 { font-size: 34px; }
       .lead { font-size: 17px; }
     }
@@ -339,11 +365,17 @@
       .section { padding: 18px 16px; }
       .hero h1 { font-size: 28px; }
       .lead { font-size: 16px; }
-      .steps, .summary-grid, .micro-trust {
+
+      .steps,
+      .summary-grid,
+      .summary-grid.four,
+      .micro-trust {
         grid-template-columns: 1fr;
       }
+
       .cta-row { flex-direction: column; }
       .btn { width: 100%; }
+
       .success-badge {
         width: 82px;
         height: 82px;
@@ -360,7 +392,7 @@
       <div class="hero">
         <div class="success-badge">✓</div>
 
-        <h1>Thank You <span id="customerNameInline">🌷</span><br>Your Order Has Been Submitted Successfully</h1>
+        <h1>Thank You<span id="customerNameInline"> 🌷</span><br>Your Order Has Been Submitted Successfully</h1>
 
         <p class="lead">
           Thank you for choosing <strong id="productNameLead">Study Book - Intellectual Learning Book</strong>.
@@ -425,17 +457,11 @@
             <div class="summary-title">Quantity</div>
             <div class="summary-text" id="productQuantity">1 Piece</div>
           </div>
-
-          <div class="summary-item">
-            <div class="summary-icon">🏷️</div>
-            <div class="summary-title">SKU</div>
-            <div class="summary-text" id="productSku">SIEO-N-TY-ZAM</div>
-          </div>
         </div>
       </div>
 
       <div class="section">
-        <div class="summary-grid">
+        <div class="summary-grid four">
           <div class="summary-item">
             <div class="summary-icon">📍</div>
             <div class="summary-title">Emirate</div>
@@ -562,7 +588,6 @@
     setText("productNameLead", order.product);
     setText("productPrice", order.price);
     setText("productQuantity", getQuantityLabel(order.quantity));
-    setText("productSku", order.sku);
     setText("customerCity", order.city);
     setText("customerName", order.name);
     setText("customerPhone", order.phone);
