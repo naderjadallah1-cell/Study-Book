@@ -43,27 +43,27 @@
 
   <style>
     :root {
-      --bg: #fff8f5;
+      --bg: #f7f1e6;
       --white: #ffffff;
-      --text: #241715;
-      --muted: #7a625d;
-      --line: #f1d9d2;
-      --soft: #fff3ee;
-      --soft2: #fff8df;
+      --text: #243126;
+      --muted: #6f7a6e;
+      --line: #e5dccb;
+      --soft: #f3ecdf;
+      --soft2: #efe4c8;
 
-      --primary: #ff5a4f;
-      --primary-dark: #e6453b;
-      --accent: #2a1b18;
+      --primary: #5f6f52;
+      --primary-dark: #46563c;
+      --accent: #2f3a2d;
 
-      --green: #2eb67d;
-      --green-soft: #ebfbf3;
+      --green: #7b8f69;
+      --green-soft: #edf3e8;
 
-      --gold: #ffbe3b;
-      --danger: #ff5a4f;
-      --danger-soft: #fff0ee;
+      --gold: #d4a84f;
+      --danger: #c97b3d;
+      --danger-soft: #f8ede2;
 
-      --shadow: 0 16px 36px rgba(255,90,79,.10);
-      --shadow-strong: 0 22px 50px rgba(255,90,79,.14);
+      --shadow: 0 16px 36px rgba(95,111,82,.12);
+      --shadow-strong: 0 22px 50px rgba(95,111,82,.18);
       --container: 1160px;
     }
 
@@ -75,9 +75,9 @@
       font-family: 'Cairo', sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(255,90,79,.08), transparent 24%),
-        radial-gradient(circle at top left, rgba(255,190,59,.12), transparent 22%),
-        linear-gradient(180deg, #fffaf8 0%, #fff4ef 100%);
+        radial-gradient(circle at top right, rgba(212,168,79,.10), transparent 24%),
+        radial-gradient(circle at top left, rgba(95,111,82,.10), transparent 22%),
+        linear-gradient(180deg, #f9f5ee 0%, #f3ecdf 100%);
     }
 
     img, video { max-width: 100%; display: block; }
@@ -86,7 +86,7 @@
     .container { max-width: var(--container); margin: auto; padding: 0 16px; }
 
     .topbar {
-      background: linear-gradient(90deg, #ff5a4f, #ff7b59);
+      background: linear-gradient(90deg, #5f6f52, #7b8f69);
       color: #fff;
       text-align: center;
       padding: 11px 12px;
@@ -96,9 +96,9 @@
     }
 
     .social-proof-bar {
-      background: linear-gradient(90deg, #fff8df, #fff3ee);
-      border-bottom: 1px solid #f3ddd6;
-      color: #6a4b43;
+      background: linear-gradient(90deg, #efe4c8, #f3ecdf);
+      border-bottom: 1px solid #ddd3c1;
+      color: #55624e;
       padding: 10px 0;
       overflow: hidden;
       position: relative;
@@ -130,7 +130,7 @@
     }
 
     .shipping-bar {
-      background: linear-gradient(90deg, #2a1b18, #4b312c);
+      background: linear-gradient(90deg, #46563c, #5f6f52);
       color: #fff;
       padding: 11px 16px;
       display: flex;
@@ -145,9 +145,9 @@
       position: sticky;
       top: 0;
       z-index: 999;
-      background: rgba(255,250,248,.92);
+      background: rgba(249,245,238,.92);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid #f0d9d2;
+      border-bottom: 1px solid #e3d9c9;
     }
 
     .header-inner {
@@ -170,17 +170,17 @@
     .brand-tag {
       font-size: 12px;
       font-weight: 700;
-      color: #8a6c65;
+      color: #798571;
     }
 
     .header-btn {
-      background: linear-gradient(135deg, #ff5a4f, #e6453b);
+      background: linear-gradient(135deg, #5f6f52, #46563c);
       color: #fff;
       border-radius: 16px;
       padding: 12px 18px;
       font-size: 14px;
       font-weight: 900;
-      box-shadow: 0 14px 28px rgba(255,90,79,.20);
+      box-shadow: 0 14px 28px rgba(95,111,82,.20);
       border: 1px solid rgba(255,255,255,.18);
     }
 
@@ -200,8 +200,8 @@
       overflow: hidden;
       position: relative;
       background:
-        radial-gradient(circle at 5% 10%, rgba(255,90,79,.08), transparent 22%),
-        radial-gradient(circle at 90% 15%, rgba(255,190,59,.14), transparent 24%),
+        radial-gradient(circle at 5% 10%, rgba(95,111,82,.08), transparent 22%),
+        radial-gradient(circle at 90% 15%, rgba(212,168,79,.14), transparent 24%),
         #fff;
     }
 
@@ -216,15 +216,15 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #fff3c8;
-      border: 1px solid #ffd56f;
-      color: #8a5400;
+      background: linear-gradient(135deg, #efe4c8, #f5ead2);
+      border: 1px solid #d4a84f;
+      color: #7a5a21;
       border-radius: 999px;
       padding: 10px 14px;
       font-size: 13px;
       font-weight: 900;
       margin-bottom: 14px;
-      box-shadow: 0 8px 22px rgba(255,190,59,.18);
+      box-shadow: 0 8px 22px rgba(212,168,79,.18);
     }
 
     .badge-row {
@@ -235,9 +235,9 @@
     }
 
     .badge {
-      background: #fff3ee;
-      border: 1px solid #ffd5ca;
-      color: #d6483c;
+      background: #edf3e8;
+      border: 1px solid #cdd8c4;
+      color: #46563c;
       border-radius: 999px;
       padding: 9px 13px;
       font-size: 13px;
@@ -259,7 +259,7 @@
     }
 
     .rating-text {
-      color: #755c57;
+      color: #6c7666;
       font-size: 14px;
       font-weight: 800;
     }
@@ -271,7 +271,7 @@
     .hero-inline-image img {
       width: 100%;
       border-radius: 22px;
-      border: 1px solid #f0ddd7;
+      border: 1px solid #e3d9c9;
       box-shadow: 0 12px 28px rgba(0,0,0,.06);
       object-fit: cover;
     }
@@ -285,30 +285,30 @@
 
     .micro-trust-item {
       background: #fff;
-      border: 1px solid #f1dcd5;
+      border: 1px solid #e5dccb;
       border-radius: 16px;
       padding: 11px 12px;
       text-align: center;
       font-size: 13px;
       font-weight: 900;
-      color: #6a4b43;
+      color: #5f6f52;
     }
 
     h1 {
       margin: 0 0 12px;
       font-size: 52px;
       line-height: 1.2;
-      color: #201310;
+      color: #243126;
       font-weight: 900;
     }
 
     .hero-lead-box {
-      background: linear-gradient(135deg, #fff8df, #fff3ee);
-      border: 1px solid #f2ddd5;
+      background: linear-gradient(135deg, #f3ecdf, #efe4c8);
+      border: 1px solid #e1d6c2;
       border-radius: 22px;
       padding: 16px 18px;
       margin-bottom: 16px;
-      color: #5e4742;
+      color: #586350;
       line-height: 1.9;
       font-size: 16px;
       font-weight: 700;
@@ -318,20 +318,20 @@
       display: block;
       margin-bottom: 6px;
       font-size: 17px;
-      color: #241715;
+      color: #243126;
     }
 
     .hero-sub {
-      color: #5c4843;
+      color: #53604e;
       font-size: 18px;
       line-height: 2;
       margin: 0 0 16px;
     }
 
     .alert-strip {
-      background: linear-gradient(135deg, #fff3c8, #fff8df);
-      border: 1px solid #ffd56f;
-      color: #8a5400;
+      background: linear-gradient(135deg, #efe4c8, #f5ead2);
+      border: 1px solid #d4a84f;
+      color: #7a5a21;
       border-radius: 18px;
       padding: 13px 15px;
       font-size: 14px;
@@ -348,17 +348,17 @@
 
     .point {
       background: #fff;
-      border: 1px solid #f1ddd7;
+      border: 1px solid #e5dccb;
       border-radius: 18px;
       padding: 13px 14px;
       font-size: 14px;
       font-weight: 800;
-      color: #6a4b43;
+      color: #5f6f52;
     }
 
     .price-box {
-      background: linear-gradient(135deg, #fff3ee, #fff8df);
-      border: 1px solid #f1d9d2;
+      background: linear-gradient(135deg, #f3ecdf, #efe4c8);
+      border: 1px solid #e1d6c2;
       border-radius: 24px;
       padding: 18px;
       position: relative;
@@ -374,7 +374,7 @@
       left: 0;
       width: 130px;
       height: 130px;
-      background: radial-gradient(circle, rgba(255,190,59,.24), transparent 70%);
+      background: radial-gradient(circle, rgba(212,168,79,.24), transparent 70%);
       pointer-events: none;
     }
 
@@ -394,7 +394,7 @@
     }
 
     .old-price {
-      color: #b0958d;
+      color: #9aa18d;
       text-decoration: line-through;
       font-size: 24px;
       font-weight: 800;
@@ -409,9 +409,9 @@
     }
 
     .save {
-      background: #fff;
-      border: 1px solid #ffd5ca;
-      color: #d6483c;
+      background: #edf3e8;
+      border: 1px solid #cdd8c4;
+      color: #46563c;
       border-radius: 999px;
       padding: 8px 12px;
       font-size: 13px;
@@ -419,7 +419,7 @@
     }
 
     .delivery, .micro-copy, .section-sub, .small-note, .mini-note {
-      color: #7a625d;
+      color: #6f7a6e;
       line-height: 1.8;
     }
 
@@ -443,7 +443,7 @@
     .countdown-label {
       font-size: 14px;
       font-weight: 800;
-      color: #654d48;
+      color: #566250;
     }
 
     .countdown {
@@ -478,10 +478,10 @@
     .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
-      background: linear-gradient(135deg, #ff5a4f, #e6453b);
+      background: linear-gradient(135deg, #5f6f52, #46563c);
       color: #fff;
       flex: 1.2;
-      box-shadow: 0 16px 34px rgba(255,90,79,.24);
+      box-shadow: 0 16px 34px rgba(95,111,82,.24);
       position: relative;
       overflow: hidden;
     }
@@ -493,7 +493,7 @@
       right: -40%;
       width: 35%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.24), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
       transform: skewX(-22deg);
       animation: shine 2.8s infinite;
     }
@@ -504,16 +504,16 @@
     }
 
     .btn-secondary {
-      background: #fff8df;
-      border: 1px solid #ffd56f;
-      color: #8a5400;
+      background: #efe4c8;
+      border: 1px solid #d4a84f;
+      color: #7a5a21;
       flex: 1;
     }
 
     .hero-cta-note {
       margin-top: 10px;
       font-size: 13px;
-      color: #856862;
+      color: #72806d;
       font-weight: 800;
     }
 
@@ -526,13 +526,13 @@
 
     .trust-item {
       background: #fff;
-      border: 1px solid #f1ddd7;
+      border: 1px solid #e5dccb;
       border-radius: 18px;
       padding: 14px;
       text-align: center;
       font-size: 14px;
       font-weight: 800;
-      color: #6a4b43;
+      color: #5f6f52;
     }
 
     .media-stack {
@@ -551,7 +551,7 @@
       border-radius: 22px;
       object-fit: cover;
       background: #fff;
-      border: 1px solid #f0ddd7;
+      border: 1px solid #e3d9c9;
       box-shadow: 0 12px 28px rgba(0,0,0,.06);
     }
 
@@ -562,19 +562,19 @@
       right: 14px;
       top: 14px;
       background: rgba(255,255,255,.96);
-      border: 1px solid #f1dcd5;
+      border: 1px solid #e5dccb;
       border-radius: 18px;
       padding: 10px 12px;
       font-size: 13px;
       font-weight: 900;
-      color: #d6483c;
+      color: #46563c;
       box-shadow: 0 12px 26px rgba(0,0,0,.07);
     }
 
     .floating-badge.bottom {
       top: auto;
       bottom: 14px;
-      background: linear-gradient(135deg, #fff, #fff3ee);
+      background: linear-gradient(135deg, #fff, #f3ecdf);
     }
 
     .side-col {
@@ -589,7 +589,7 @@
     .section-title {
       margin: 0 0 10px;
       font-size: 34px;
-      color: #201310;
+      color: #243126;
       font-weight: 900;
     }
 
@@ -629,14 +629,14 @@
     .order-pill,
     .mini-card {
       background: #fff;
-      border: 1px solid #f1ddd7;
+      border: 1px solid #e5dccb;
       border-radius: 22px;
       padding: 18px;
     }
 
     .proof-box {
       text-align: center;
-      background: linear-gradient(135deg, #fff8df, #fff3ee);
+      background: linear-gradient(135deg, #f3ecdf, #efe4c8);
     }
 
     .proof-box .num {
@@ -649,7 +649,7 @@
     .proof-box .txt {
       font-size: 14px;
       font-weight: 800;
-      color: #6d544e;
+      color: #62705b;
       line-height: 1.7;
     }
 
@@ -669,15 +669,15 @@
     .faq-item p,
     .mini-card p {
       margin: 0;
-      color: #705a54;
+      color: #61705c;
       line-height: 1.9;
       font-size: 15px;
     }
 
     .benefit {
-      background: #fffaf5;
+      background: #faf7f1;
       font-weight: 700;
-      color: #5e4742;
+      color: #53604e;
     }
 
     .review .stars {
@@ -688,36 +688,36 @@
     .review-name {
       margin-top: 12px;
       font-weight: 900;
-      color: #241715;
+      color: #243126;
     }
 
     .review-tag {
       margin-top: 4px;
       font-size: 13px;
-      color: #8a6f68;
+      color: #7d8876;
     }
 
     .faq-item strong {
       display: block;
       margin-bottom: 8px;
       font-size: 16px;
-      color: #241715;
+      color: #243126;
     }
 
     .order-box { padding: 24px; }
 
     .order-pill {
-      background: #fffaf5;
+      background: #faf7f1;
       text-align: center;
       font-size: 14px;
       font-weight: 800;
-      color: #6a4b43;
+      color: #5f6f52;
     }
 
     .order-priority {
-      background: linear-gradient(135deg, #fff3c8, #fff8df);
-      border: 1px solid #ffd56f;
-      color: #8a5400;
+      background: linear-gradient(135deg, #efe4c8, #f5ead2);
+      border: 1px solid #d4a84f;
+      color: #7a5a21;
       padding: 14px 16px;
       border-radius: 18px;
       font-size: 14px;
@@ -737,7 +737,7 @@
       width: 100%;
       padding: 15px 14px;
       border-radius: 16px;
-      border: 1px solid #efd8d1;
+      border: 1px solid #dfd6c6;
       font-size: 16px;
       background: #fff;
       outline: none;
@@ -746,8 +746,8 @@
     }
 
     input:focus, textarea:focus, select:focus {
-      border-color: #ff8b73;
-      box-shadow: 0 0 0 4px rgba(255,90,79,.10);
+      border-color: #7b8f69;
+      box-shadow: 0 0 0 4px rgba(95,111,82,.10);
     }
 
     textarea {
@@ -759,7 +759,7 @@
     .submit-btn {
       width: 100%;
       margin-top: 14px;
-      background: linear-gradient(135deg, #ff5a4f, #e6453b);
+      background: linear-gradient(135deg, #5f6f52, #46563c);
       color: #fff;
       border: none;
       border-radius: 18px;
@@ -767,7 +767,7 @@
       font-size: 19px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 16px 34px rgba(255,90,79,.24);
+      box-shadow: 0 16px 34px rgba(95,111,82,.24);
       position: relative;
       overflow: hidden;
     }
@@ -779,7 +779,7 @@
       right: -35%;
       width: 30%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.24), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
       transform: skewX(-20deg);
       animation: shine 2.8s infinite;
     }
@@ -798,7 +798,7 @@
       font-weight: 700;
     }
 
-    .status-success { background: #eafaf2; color: #0d7f52; border: 1px solid #cdeedc; }
+    .status-success { background: #eef5ea; color: #36502f; border: 1px solid #d4e4cc; }
     .status-error { background: #fff1f1; color: #b42318; border: 1px solid #f5c5c5; }
 
     .sticky-cta {
@@ -816,13 +816,13 @@
       justify-content: space-between;
       gap: 10px;
       min-height: 72px;
-      background: linear-gradient(135deg, #ff5a4f, #e6453b);
+      background: linear-gradient(135deg, #5f6f52, #46563c);
       color: #fff;
       border-radius: 22px;
       font-size: 16px;
       font-weight: 900;
       padding: 12px 16px;
-      box-shadow: 0 20px 42px rgba(230,69,59,.28);
+      box-shadow: 0 20px 42px rgba(70,86,60,.28);
       border: 1px solid rgba(255,255,255,.18);
     }
 
@@ -858,7 +858,7 @@
       min-width: 290px;
       max-width: 340px;
       background: rgba(255,255,255,.98);
-      border: 1px solid #f0ddd7;
+      border: 1px solid #e5dccb;
       box-shadow: 0 18px 38px rgba(0,0,0,.10);
       border-radius: 18px;
       padding: 14px 14px 12px;
@@ -884,7 +884,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #fff3ee, #ffe3da);
+      background: linear-gradient(135deg, #f3ecdf, #efe4c8);
       font-size: 20px;
     }
 
@@ -892,12 +892,12 @@
       font-size: 14px;
       font-weight: 900;
       margin-bottom: 3px;
-      color: #241715;
+      color: #243126;
     }
 
     .live-order-sub {
       font-size: 13px;
-      color: #7a625d;
+      color: #6f7a6e;
       font-weight: 700;
       line-height: 1.5;
     }
@@ -905,12 +905,12 @@
     .live-order-time {
       margin-top: 5px;
       font-size: 12px;
-      color: #9a837d;
+      color: #96a08f;
       font-weight: 800;
     }
 
     footer {
-      background: linear-gradient(90deg, #2a1b18, #4b312c);
+      background: linear-gradient(90deg, #46563c, #5f6f52);
       color: #fff;
       text-align: center;
       padding: 24px 12px;
